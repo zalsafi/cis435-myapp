@@ -1,21 +1,22 @@
 function ContactForm() {
     return (
-        <>
-            <label htmlFor="name">Name:</label>
-            <input type="text" placeholder="Name" />
-             <label htmlFor="email">Email:</label>
-            <input type="email" placeholder="Email" /> 
-            <label htmlFor="phone">Phone:</label>
-            <input type="tel" placeholder="Phone" />
-        </>
+        <form>
+            <h2> Add Contact</h2>
+            
+            <label id="name">Name:</label>
+            <input id="name" type="text" placeholder="Name" required/>
 
-// this code for the required field I asked in google search//
+             <label id="email">Email:</label>
+            <input id="email" type="email" placeholder="Email" required/> 
+
+            <label id="phone">Phone:</label>
+            <input id="phone" type="tel" placeholder="Phone" />
+
+            <button type="submit">Add Contact</button>
+        </form>
+
+// the code for the required in the react way, I asked in google search//
 ) 
-const emailInput = document.getElementById('email');
-emailInput.required = true;
-
-const nameInput = document.getElementById('name');
-nameInput.required = true;
 }
 
 export default ContactForm
