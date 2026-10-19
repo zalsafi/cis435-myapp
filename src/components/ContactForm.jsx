@@ -3,13 +3,13 @@ function ContactForm() {
         <form>
             <h2> Add Contact</h2>
             
-            <label id="name">Name:</label>
+            <label htmlFor="name">Name:</label>
             <input id="name" type="text" placeholder="Name" required/>
 
-             <label id="email">Email:</label>
+             <label htmlFor="email">Email:</label>
             <input id="email" type="email" placeholder="Email" required/> 
 
-            <label id="phone">Phone:</label>
+            <label htmlFor="phone">Phone:</label>
             <input id="phone" type="tel" placeholder="Phone" />
 
             <button type="submit">Add Contact</button>
