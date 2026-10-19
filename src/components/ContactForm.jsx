@@ -1,16 +1,27 @@
+import {useState} from 'react'
+
 function ContactForm() {
+    const [name, setName] =useState('')
+    const [email, setEmail] =useState('')
+    const [phone, setPhone] =useState('')
     return (
         <form>
             <h2> Add Contact</h2>
             
             <label htmlFor="name">Name:</label>
             <input id="name" type="text" placeholder="Name" required/>
+            onChange={(e) => setName(e.target.value)}
+            value={name}
 
              <label htmlFor="email">Email:</label>
             <input id="email" type="email" placeholder="Email" required/> 
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
 
             <label htmlFor="phone">Phone:</label>
             <input id="phone" type="tel" placeholder="Phone" />
+            onChange= {(e) => setPhone(e.target.value)}
+            value={phone}
 
             <button type="submit">Add Contact</button>
         </form>
