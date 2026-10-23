@@ -1,8 +1,5 @@
 function ContactList({ contacts }) {
-  return (
-    <div>
-        <h2>Contact List</h2>
-        <table>
+  const table = <table>
           <thead>
           <tr>
           <th>Name</th>
@@ -20,8 +17,12 @@ function ContactList({ contacts }) {
           ))}
           </tbody>
         </table>
+  return (
+    <div>
+        <h2>Contact List</h2>
+        {contacts.length===0 ?"No contacts yet. Add one above!": table}
+
         </div>
   )
 }
-
 export default ContactList 
