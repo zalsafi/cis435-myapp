@@ -8,3 +8,5 @@ return (
          </tr>  
 )
 }
+
+export default ContactItem
