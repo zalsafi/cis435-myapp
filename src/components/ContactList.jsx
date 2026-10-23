@@ -1,3 +1,4 @@
+import ContactItem from './ContactItem'
 function ContactList({ contacts }) {
   const table = <table>
           <thead>
@@ -9,11 +10,7 @@ function ContactList({ contacts }) {
           </thead>
           <tbody>
             {contacts.map((contact) => (
-              <tr key={contact.id}>
-              <td> {contact.name}</td>
-              <td> {contact.phone}</td>
-              <td> {contact.email}</td>
-              </tr>
+              <ContactItem key={contact.id} contact={contact}/>
           ))}
           </tbody>
         </table>
