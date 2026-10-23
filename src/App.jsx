@@ -6,8 +6,18 @@ import './App.css'
 
 function App() {
   const [contacts, setContacts] = useState([])
-  const [filter, setFilter]= useState([])
+  const [filter, setFilter]= useState('')
 
+const filterContacts = contacts.filter((contact)=>{
+  const name = contact.name.toLowerCase()
+  const email = contact.email.toLowerCase()
+  const phone = contact.phone.toLowerCase()
+  const search = filter.toLowerCase()
+  const addContact = (contact) => {
+    setContacts([old.contacts, contact])
+  }
+
+  return name.inlcudes(search) || email.includes(search) || phone.includes(search)})
   return (
     <>
       <section id="center">
@@ -17,10 +27,11 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Get started</h1>
+          <h1>Contacts</h1>
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
+          <ContactForm/>
         </div>
         <button
           type="button"
