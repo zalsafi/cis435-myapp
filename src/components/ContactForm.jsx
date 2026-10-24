@@ -1,11 +1,28 @@
 import {useState} from 'react'
 
-function ContactForm() {
+function ContactForm({onAddContact}) {
     const [name, setName] =useState('')
     const [email, setEmail] =useState('')
     const [phone, setPhone] =useState('')
+    const handleSubmit = (e)=> {
+        e.preventDefault()
+        if (!email.includes('@')){
+            return
+        }
+
+        const newContact = {
+            id: Date.now().toString(),
+            name: name,
+            email: email,
+            phone: phone
+        }
+        onAddContact(newContact)
+        setName('')
+        setEmail('')
+        setPhone('')
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2> Add Contact</h2>
             
             <label htmlFor="name">Name:</label>

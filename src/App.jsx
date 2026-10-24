@@ -14,7 +14,8 @@ const filterContacts = contacts.filter((contact)=>{
   const phone = contact.phone.toLowerCase()
   const search = filter.toLowerCase()
   const addContact = (contact) => {
-    setContacts([old.contacts, contact])
+    setContacts(...contacts, contact])
+  
   }
 
   return name.inlcudes(search) || email.includes(search) || phone.includes(search)})
@@ -31,8 +32,12 @@ const filterContacts = contacts.filter((contact)=>{
           <p>
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
-          <ContactForm/>
+          <ContactForm onAddContact={addContact}/>
+          <SearchBar onSearch={setFilter} />
+          <ContactList contacts={filterContacts} oneDeleteContact={deleteContact} filter={filter}/>
+
         </div>
+
         <button
           type="button"
           className="counter"

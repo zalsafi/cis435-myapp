@@ -5,7 +5,7 @@ return (
         <td> {contact.name} </td>
          <td> {contact.phone} </td>
          <td> {contact.email} </td>
-         <td> <button>Delete</button></td>
+         <td> <button onClick={() => onDeleteContact(contact.id)}>Delete</button></td>
          </tr>  
 )
 }
