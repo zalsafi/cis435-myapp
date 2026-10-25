@@ -4,9 +4,10 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/cis435-myapp/',
+  
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  base: '/cis435-myapp/'
 })
