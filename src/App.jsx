@@ -14,11 +14,10 @@ const filterContacts = contacts.filter((contact)=>{
   const phone = contact.phone.toLowerCase()
   const search = filter.toLowerCase()
   const addContact = (contact) => {
-    setContacts(...contacts, contact])
-  
+    setContacts([...contacts, contact])
   }
 
-  return name.inlcudes(search) || email.includes(search) || phone.includes(search)})
+  return name.includes(search) || email.includes(search) || phone.includes(search)})
   return (
     <>
       <section id="center">

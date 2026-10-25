@@ -1,6 +1,6 @@
 .table {
   font-size: 16px;
-  width: 100%
+  width: 100%;
   border-collapse: collapse;
   background: white;
   margin-top: 20px;
@@ -16,6 +16,7 @@ form {
   background: white;
   padding: 20px;
   margin-top: 20px;
+}
 }
 
 form input {
@@ -51,11 +52,10 @@ form button {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
-}
 body{
   margin: 0;
   font-family: arial;
-  bakcground: grey;
+  background: grey;
 }
 #root {
   min-height: 100vh;
@@ -208,7 +208,7 @@ body{
     margin-right: 0;
   }
   .table {
-    font-size: 12px;
+    font-size: 14px;
   }
   .table th, .table td {
     padding: 8px;
