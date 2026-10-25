@@ -19,7 +19,7 @@ function ContactList({ contacts, onDeleteContact, filter }) {
   return (
     <div>
         <h2>Contact List</h2>
-        {contacts.length===0 ? filter ? 'No matches found for &"{filter}"' :"No contacts yet. Add one above!": table}
+        {contacts.length===0 ? filter ? `No matches found for "${filter}"` : "No contacts yet. Add one above!" : table}
         </div>
   )
 }
