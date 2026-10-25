@@ -15,6 +15,12 @@ const filteredContacts = contacts.filter((contact)=>{
   const search = filter.toLowerCase()
 
   return name.includes(search) || email.includes(search) || phone.includes(search)})
+  const addContact = (contact) => {
+    setContacts([...contacts, contact])
+  }
+const deleteContact = (id) => {
+    setContacts(contacts.filter((contact) => contact.id !== id))
+  }
   return (
     <>
       <section id="center">
@@ -30,10 +36,4 @@ const filteredContacts = contacts.filter((contact)=>{
   )
 }
 
-const addContact = (contact) => {
-    setContacts([...contacts, contact])
-  }
-const deleteContact = (id) => {
-    setContacts(contacts.filter((contact) => contact.id !== id))
-  }
 export default App

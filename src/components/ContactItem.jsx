@@ -1,5 +1,5 @@
 
-function ContactItem({ contact }) {
+function ContactItem({ contact, onDeleteContact }) {
 return (
     <tr>
         <td> {contact.name} </td>
