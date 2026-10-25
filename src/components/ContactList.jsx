@@ -1,6 +1,7 @@
 import ContactItem from './ContactItem'
 function ContactList({ contacts, onDeleteContact, filter }) {
-  const table = <table>
+  const table = <table className="table">
+
           <thead>
           <tr>
           <th>Name</th>
@@ -14,6 +15,7 @@ function ContactList({ contacts, onDeleteContact, filter }) {
           ))}
           </tbody>
         </table>
+        
   return (
     <div>
         <h2>Contact List</h2>
